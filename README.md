@@ -4,7 +4,7 @@ __________________________________________________
 1. Download XAMPP
 2. Download Laravel package
 3. Install Laravel Package
-4. You should now be all set up
+4. And finally npm install or npm init
 
 
 If any problems follow these guides
