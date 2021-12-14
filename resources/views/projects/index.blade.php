@@ -4,7 +4,7 @@
 @section('content')
     <div class="content">
         <div class="title">
-        SOP Project
+        Oprettede Projekter
     </div>
     <table class="w-full">
         <thead class="bg-black">
@@ -40,7 +40,7 @@
                         <form class="flex items-center justify-center m-0" action="/projects/{{ $project->id }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button><i class="fa fa-trash"></i></button>
+                            <button><i class="fas fa-check"></i></button>
                         </form>
                     </td>
                 </tr>
@@ -73,7 +73,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('body').on('click', '#edit-project', function(){
-                var tdParent = $(this).parent().parent();
+                let tdParent = $(this).parent().parent();
 
                 $(this).replaceWith('<i class="fa fa-save" id="save-project">');
 
@@ -100,7 +100,7 @@
                     url: '/projects/' + $(this).attr('project-id'),
                     data: $(this).serialize(),
                     success: function(data){
-                        var notification = $(`
+                        let notification = $(`
                             <div class="${data.bgColor} rounded-md shadow-md hidden p-5">
                                 ${data.message}
                             </div>

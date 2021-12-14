@@ -9,7 +9,7 @@
         @csrf
             <label class="block" for="name">Dit navn:</label>
             <input type="text" name="name" id="name">
-            <label class="block pt-5" for="type">Vælg Project type</label>
+            <label class="block pt-5" for="type">Vælg Projekt type</label>
             <select class="block" name="type" id="type">
                 <option value="projekt">Projekt</option>
                 <option value="aflevering">Aflevering</option>
