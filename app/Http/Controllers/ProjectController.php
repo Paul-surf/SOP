@@ -8,10 +8,7 @@ use App\Models\Projects;
 class ProjectController extends Controller
 {
     public function index() {
-        //$projects = Projects::all();
         $projects = Projects::orderBy('name', 'desc')->get();
-        //$projects = Projects::where('type', 'Projekt')->get();
-        //$projects = Projects::latest()->get();
     
        return view('projects.index', [
            'projects' => $projects,
