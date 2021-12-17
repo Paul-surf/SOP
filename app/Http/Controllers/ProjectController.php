@@ -34,7 +34,7 @@ class ProjectController extends Controller
             'extra' => $request->get('extra')
         ]);  
 
-        return redirect('/')->with('msg', 'Created Project: <a href="/projects/' . $project->id . '">' . $project->name . '</a>');
+        return redirect('/')->with('msg', 'Oprettede Projekt: <a href="/projects/' . $project->id . '">' . $project->opgave . '</a>');
     }
 
     public function destroy(Request $request) {

@@ -21,11 +21,8 @@ Route::get('/', function () {
 //er over /create så kan man ikke komme ind på create siden
 //da {id} tror det er et id som skal sendes ind til ID siden
 Route::get('/projects', [ProjectController::class, 'index'])->name('list.projects');
-
 Route::get('/projects/create', [ProjectController::class, 'create']);
-
 Route::post('/projects', [ProjectController::class, 'store']);
-
 Route::get('/projects/{id}', [ProjectController::class, 'show']);
 Route::delete('/projects/{id}', [ProjectController::class, 'destroy']);
 Route::put('/projects/{id}', [ProjectController::class, 'update']);
